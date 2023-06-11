@@ -1,0 +1,68 @@
+Positive and negative review
+
+This process is called embedding, with the idea being
+that words and associated words are clustered as vectors in
+a multi-dimensional space. 
+
+负面和正面词汇，互相有相关词联系在一起
+
+http://ai.stanford.edu/~amaas/data/sentiment/
+
+version: python 3
+
+
+we using simlar structure to process np array
+
+model = tf.keras.Sequential([
+    tf.keras.layers.Embedding(vocab_size, embedding_dim, input_length=max_length),
+    tf.keras.layers.Flatten(),
+#The results of the embedding will be a 2D array with the length of the sentence and the embedding 
+#dimension for example 16 as its size. So we need to flatten it out 
+    tf.keras.layers.Dense(6, activation='relu'),
+    tf.keras.layers.Dense(1, activation='sigmoid')
+])
+
+render your model
+https://projector.tensorflow.org/
+
+IMDB dataset github:
+
+https://github.com/tensorflow/datasets/blob/master/docs/catalog/imdb_reviews.md
+
+tensorlow:
+
+https://www.tensorflow.org/datasets/overview
+
+use: 
+import tensorflow_datasets as tfds
+
+# Download the subword encoded pretokenized dataset
+imdb_subwords, info_subwords = tfds.load("imdb_reviews/subwords8k", with_info=True, as_supervised=True)
+
+lab3:
+One thing to take into account though, is the shape of the vectors coming from the tokenizer through the embedding, and it's not easily flattened. So we'll use Global Average Pooling 1D instead.
+
+
+
+
+
+Here are the key takeaways for this week:
+
+You looked at taking your tokenized words and passing them to an Embedding layer.
+
+Embeddings map your vocabulary to vectors in higher-dimensional space. 
+
+The semantics of the words were learned when those words were labeled with similar meanings. For example, when looking at movie reviews, those movies with positive sentiment had the dimensionality of their words ending up pointing a particular way, and those with negative sentiment pointing in a different direction. From these, the words in future reviews could have their direction established and your model can infer the sentiment from it. 
+
+You then looked at subword tokenization and saw that not only do the meanings of the words matter but also the sequence in which they are found. 
+
+
+Next week, you will:
+
+Look at other network architectures that you can use when building NLP models. 
+
+Use Recurrent Neural Networks to take note of the sequence of your tokens.
+
+Use a convolutional layer to extract features from your model.
+
+Compare the performance of different architectures in building binary classifiers.

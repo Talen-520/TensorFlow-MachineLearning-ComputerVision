@@ -1,0 +1,40 @@
+RNN - recurrent neural network (recursion ...) fed x0 produce y0 feed -> x1 produce y1
+
+
+LSTM - Long short term memory
+
+In addition to the context being passed as it is in RNNs, LSTMs have an additional pipeline of contexts called cell state. This can pass through the network to impact it. This helps keep context from earlier tokens relevance in later ones so issues like the one that we just discussed can be avoided. Cell states can also be bidirectional. 
+
+pass input output between two layer, use bidirectional()
+
+
+mutiple and single layer:
+1.There's not much of a difference except the nosedive and the validation accuracy.
+2.training networks that jaggedness can be an indication that your model needs improvement, and the single LSTM that you can see here is not the smoothest
+muti - smoother/single - jaggedness
+
+Gated Recurrent Units also called GRUs
+
+without LSTM(GlobalAvergaePooling) training and vaildation: quickly climb up to 85% accuracy and 80 vaildation accuracy then flattened 
+
+with LSTM(bidirection) training and vaildation:  climb up 85% really qucik then keep climb to 97.5% accuarcy with more epochs,vaildation accuracy drop little be, indicate overfitting 
+
+Lost for nonLSTM: stable and healthy flattened
+
+Loss for LSTM: train lost drop nicely,validation climb up with more epochs
+
+conv1D(128,5, activation = 'relu') 
+5 is size of word, 128 is fliter each for 5 words
+
+lab 4:
+Flatten: faster than 1d
+
+LSTM: This is slower to train but useful in applications where the order of the tokens is important.
+
+GRU:  simpler version of the LSTM, faster , less accuracy
+
+Convolution:
+Lastly, you will use a convolution layer to extract features from your dataset. You will append a GlobalAveragePooling1d layer to reduce the results before passing it on to the dense layers. Like the model with Flatten, this also trains much faster than the ones using RNN layers like LSTM and GRU.
+lab 5 & 6:
+
+bi_LSTM faster than 1d_convolutional, similar accuracy and lose, but convolutional more stable

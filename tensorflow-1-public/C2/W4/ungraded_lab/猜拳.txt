@@ -1,0 +1,3 @@
+数据库用于辨别剪刀石头布，以下几点改变
+tf.keras.layers.Dense(3, activation='softmax')，三个神经元用于三个classes
+	class_mode='categorical',

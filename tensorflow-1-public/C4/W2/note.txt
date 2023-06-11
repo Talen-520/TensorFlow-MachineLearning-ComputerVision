@@ -1,0 +1,8 @@
+First of all, as with any other ML problem, we have to divide our data into features and labels. In this case our feature is effectively a number of values in the series, with our label being the next value. We'll call that number of values that will treat as our feature, the window size, where we're taking a window of the data and training an ML model to predict the next value. 
+
+
+MAE focuses on the average magnitude of errors, considering their absolute differences, while MSE additionally considers the squared differences and puts more weight on larger errors
+
+You've now explored time series data and seen how to split it into training and validation sets for training a DNN.
+
+But sequence data tends to work better with RNNs. So next week, you're going to look at training a model using RNNs and LSTMs on this data to see what happens.

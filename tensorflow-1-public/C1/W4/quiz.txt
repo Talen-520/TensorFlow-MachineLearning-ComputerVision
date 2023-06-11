@@ -1,0 +1,142 @@
+1.
+Question 1
+Using Image Generator, how do you label images?
+
+1 / 1 point
+
+It’s based on the file name
+
+
+#It’s based on the directory the image is contained in
+
+
+You have to manually do it
+
+
+TensorFlow figures it out from the contents
+
+Correct
+That’s right! The directory of the image is the label.
+
+2.
+Question 2
+What method on the Image Generator is used to normalize the image?
+
+1 / 1 point
+
+normalize
+
+
+#rescale
+
+
+Rescale_image
+
+
+normalize_image
+
+Correct
+You‘ve got it! This is the correct method for normalizing images.
+
+3.
+Question 3
+How did we specify the training size for the images?
+
+1 / 1 point
+
+#The target_size parameter on the training generator
+
+
+The training_size parameter on the training generator
+
+
+The training_size parameter on the validation generator
+
+
+The target_size parameter on the validation generator
+
+Correct
+Exactly! target_size specifies the image training size
+
+4.
+Question 4
+When we specify the input_shape to be (300, 300, 3), what does that mean?
+
+1 / 1 point
+
+There will be 300 images, each size 300, loaded in batches of 3
+
+
+#Every Image will be 300x300 pixels, with 3 bytes to define color
+
+
+There will be 300 horses and 300 humans, loaded in batches of 3
+
+
+Every Image will be 300x300 pixels, and there should be 3 Convolutional Layers
+
+Correct
+Nailed it! input_shape specifies image resolution.
+
+5.
+Question 5
+If your training data is close to 1.000 accuracy, but your validation data isn’t, what’s the risk here?
+
+1 / 1 point
+
+You’re underfitting on your validation data
+
+
+#You’re overfitting on your training data
+
+
+You’re overfitting on your validation data
+
+
+No risk, that’s a great result
+
+Correct
+Great job! The analysis corresponds too closely to the training data, and may therefore fail to fit additional data.
+
+6.
+Question 6
+Convolutional Neural Networks are better for classifying images like horses and humans because:
+
+1 / 1 point
+#
+There’s a wide variety of horses
+
+Correct
+#Way to go! CNNs are better in this case as they are independent from prior knowledge and human intervention in feature extraction.
+
+
+#There’s a wide variety of humans
+
+Correct
+You’ve got it! CNNs are better in this case as they are independent from prior knowledge and human intervention in feature extraction.
+
+
+#In these images, the features may be in different parts of the frame
+
+Correct
+Correct! The receptive fields of different neurons partially overlap such that they cover the entire visual field.
+
+7.
+Question 7
+After reducing the size of the images, the training results were different. Why?
+
+1 / 1 point
+
+#We removed some convolutions to handle the smaller images
+
+
+There was less information in the images
+
+
+There was more condensed information in the images
+
+
+The training was faster
+
+Correct
+Yes! Removing some convolutions modifies the training results.

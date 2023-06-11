@@ -1,0 +1,102 @@
+1.
+Question 1
+When predicting words to generate poetry, the more words predicted the more likely it will end up gibberish. Why?
+
+1 / 1 point
+
+Because you are more likely to hit words not in the training set
+
+
+#Because the probability that each word matches an existing phrase goes down the more words you create
+
+
+Because the probability of prediction compounds, and thus increases overall
+
+
+It doesn’t, the likelihood of gibberish doesn’t change
+
+Correct
+That's right!
+
+2.
+Question 2
+What is a major drawback of word-based training for text generation instead of character-based generation?
+
+1 / 1 point
+
+Word based generation is more accurate because there is a larger body of words to draw from
+
+
+There is no major drawback, it’s always better to do word-based training
+
+
+Character based generation is more accurate because there are less characters to predict
+
+
+#Because there are far more words in a typical corpus than characters, it is much more memory intensive
+
+Correct
+Correct!
+
+3.
+Question 3
+What are the critical steps in preparing the input sequences for the prediction model?
+
+0.5 / 1 point
+
+Converting the seed text to a token sequence using texts_to_sequences.
+
+This should not be selected
+Sorry, wrong answer.
+
+
+Splitting the dataset into training and testing sentences.
+
+This should not be selected
+Not quite.
+
+
+Pre-padding the subprhases sequences.
+
+Correct
+You've got it!
+
+
+Generating subphrases from each line using n_gram_sequences. 
+
+Correct
+Keep it up!
+
+4.
+Question 4
+In  natural language processing, predicting the next item in a sequence is a classification problem.Therefore, after creating inputs and labels from the subphrases, we one-hot encode the labels. What function do we use to create one-hot encoded arrays of the labels?
+
+1 / 1 point
+
+tf.keras.utils.SequenceEnqueuer
+
+
+tf.keras.utils.img_to_array
+
+
+#tf.keras.utils.to_categorical
+
+
+tf.keras.preprocessing.text.one_hot
+
+Correct
+Nailed it!
+
+5.
+Question 5
+True or False: When building the model, we use a sigmoid activated Dense output layer with one neuron per word that lights up when we predict a given word.
+
+1 / 1 point
+
+True
+
+
+#False
+
+Correct
+Absolutely!

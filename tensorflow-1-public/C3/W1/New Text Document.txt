@@ -1,0 +1,7 @@
+example of slient an listen, same ASCII number but different meaning, so give a word token is better 
+such
+I(001) love(002) my(003) dog(004)-1234
+I love my cat(005) -1235
+create token for each word
+
+本节为怎么从json append信息到dictionary， 并用token generate index for each word

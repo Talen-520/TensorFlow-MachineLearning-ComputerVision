@@ -1,0 +1,25 @@
+pre padding, we do this to get label by grabbing the last token
+
+token sequence example:
+
+[0,0,0,0,4,2,66,8] - > 8 is label(Y)
+
+- > 0,0,0,0,4,2,66 is label(x)
+
+to get label:
+xs = input_sequences[:,:-1]# in 2d array, get all element except last
+labels = input_sequences[:,-1] # in 2d array, get last element 
+
+example:
+
+my_array = np.array([[1, 2, 3],
+                     [4, 5, 6],
+                     [7, 8, 9]])
+selected_elements = my_array[:,-1]
+print(selected_elements)  # Output: [3, 6, 9]
+
+try different property in embedding like 64,100 
+LSTM unit 20,150
+
+tensorflow text generation:
+https://www.tensorflow.org/text/tutorials/text_generation

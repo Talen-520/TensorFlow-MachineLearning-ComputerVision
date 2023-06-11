@@ -1,0 +1,18 @@
+time series:an ordered sequence of values that are usually equally spaced over time
+
+for example, every year in my Moore's law charts or every day in the weather forecast In each of these examples, there is a single value at each time step, and as a results, the term univariate is used to describe them. You may also encounter time series that have multiple values at each time step. As you might expect, they're called ------ Multivariate Time Series.
+
+fixed partition : training period, validation period, test period
+
+forward partitioning: We start with a short training period, and we gradually increase it, say by one day at a time, or by one week at a time. At each iteration, we train the model on a training period. And we use it to forecast the following day, or the following week, in the validation period. And this is called roll-forward partitioning
+
+errors = forecasts - actual
+mse = np.square(errors).mean() #elminate negative value, if large errors are potentially dangerous and they cost you much more than smaller errors, then you may prefer the mse
+
+or 
+mae = np.abs(errors).mean() # your gain or your loss is just proportional to the size of the error
+
+
+simple forecasting method is to calculate a moving average
+
+Note that we used the trailing window when computing the moving average of present values But we used a centered window to compute the moving average of past values. Moving averages using centered windows can be more accurate than using trailing windows. But we can't use centered windows to smooth present values since we don't know future values. However, to smooth past values we can afford to use centered windows.

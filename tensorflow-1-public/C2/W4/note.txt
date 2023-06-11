@@ -1,0 +1,6 @@
+What have we seen so far?
+You're coming to the end of Course 2, and you've come a long way! From first principles in understanding how ML works, to using a DNN to do basic computer vision, and then beyond into convolutions.
+
+With convolutions, you then saw how to extract features from an image, and you saw the tools in TensorFlow and Keras to build with convolutions and pooling as well as handling complex, multi-sized images.
+
+Through this, you saw how overfitting can have an impact on your classifiers, and explored some strategies to avoid it, including image augmentation, dropout, transfer learning, and more. To wrap things up, you looked at the considerations in your code to build a model for multi-class classification! 
